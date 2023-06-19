@@ -1,0 +1,589 @@
+
+            /*INDEX*/
+/**/
+.banderoll{
+    /*STRUCTURE*/
+    margin-top: 8vh;
+    padding: 0vh 10vw;
+
+
+    /*STYLE*/
+    border-top: 1px solid #cecece;
+    background-color: #cecece;
+}
+.banderoll img{
+    /*STRUCTURE*/
+    width: 80dvw;
+    height: 60dvh;
+    
+    /*STYLE*/
+
+
+}
+
+
+
+
+
+
+
+
+
+        /*ANNONCE*/
+
+
+.categories{
+    /*STRUCTURE*/
+    display: flex;
+    flex-direction: row;
+    min-width: 60%;
+    max-width: 90%;
+    overflow-x:auto;
+    margin: 4vh 5vw;
+    
+    
+    /*STYLE*/
+    background-color: #cecece;
+    
+}
+.categories .categorie{
+    /*STRUCTURE*/
+    margin: 0vh 1vw;
+    overflow: hidden;
+    
+    /*STYLE*/
+    border-radius: 20px;
+
+}
+.categories .categorie img{
+    /*STRUCTURE*/
+    width: 100%;
+    height: 100%;
+
+    /*STYLE*/
+
+}
+.categories .categorie p{
+    /*STRUCTURE*/
+    position: relative;
+    bottom: 25%;
+    left: 25%;
+
+    /*STYLE*/
+    font-size: 1.2vh;
+    color: #ffffff;
+}
+
+
+
+
+
+
+            /*LOGIN*/
+
+
+
+        /*CONNEXION*/
+
+.login{
+    /*STRUCTURE*/
+    margin-top: 20vh;
+    
+    /*STYLE*/
+
+
+}
+.connexion{
+    /*STRUCTURE*/
+    margin: 0vh auto;
+    padding: 5vh 1vw;
+    width: 35vw;
+
+
+    /*STYLE*/
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 0px 10px #000000;
+
+}
+.connexion form div{
+    /*STRUCTURE*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh 0vw;
+
+    /*STYLE*/
+}
+
+.connexion form div input{
+    /*STRUCTURE*/
+    width:20vw ;
+    height:3vh ;
+    padding: 0vh 0.8vw;
+
+    /*STYLE*/
+    border-radius: 15px;
+    
+}
+.connexion .inscris{
+    /*STRUCTURE*/
+    display: flex;
+    justify-content: end;
+    padding: 2vh 0vw;
+    
+    /*STYLE*/
+
+}
+.connexion .submit{
+    /*STRUCTURE*/
+    display: flex;
+    justify-content: center;
+}
+.connexion .submit input{
+    /*STRUCTURE*/
+    display: flex;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    
+    /*STYLE*/
+    box-shadow: 0px 0px 8px #000000;
+    border: none;
+    color: #ffffff;
+    background-color: #1010ff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+        /*INSCRIPTION*/
+        
+    .inscription{
+        /*STRUCTURE*/
+    margin: 0vh auto;
+    padding: 5vh 1vw;
+    width: 35vw;
+    
+    
+        /*STYLE*/
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 0px 10px #000000;
+
+    
+    }
+    .inscription form div{
+        /*STRUCTURE*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2vh 0vw;
+    
+        /*STYLE*/
+    }
+    .inscription form div input{
+        /*STRUCTURE*/
+    width:20vw ;
+    height:3vh ;
+    padding: 0vh 0.8vw;
+    
+        /*STYLE*/
+    border-radius: 15px;
+    
+    }
+
+    .inscription div a:visited,.connexion div a:visited{
+        /*STYLE*/
+        color: #1010ff;
+    
+    }
+    .inscription div a:active,.connexion div a:active{
+        /*STYLE*/
+        color: #91959b;
+    
+    }
+    .inscription .submit{
+        /*STRUCTURE*/
+        display: flex;
+        justify-content: center;
+    }
+    .inscription .submit input{
+        /*STRUCTURE*/
+        width: 10vw;
+        height: 4vh;
+        
+        /*STYLE*/
+        box-shadow: 0px 0px 8px #000000;
+        border: none;
+        color: #ffffff;
+        background-color: #1010ff;
+        cursor: pointer;
+    }
+    .inscription .connecte{
+        /*STRUCTURE*/
+        display: flex;
+        justify-content: end;
+    
+        /*STYLE*/
+
+
+}
+
+
+
+
+
+
+
+
+
+
+                /*CHAT*/
+
+.message{
+        /*STRUCTURE*/
+    display: flex;
+    flex-direction: row;
+    padding: 2vh 2vw;
+    height: 80vh;
+
+        /*STYLE*/
+    box-shadow:inset 0px 0px 10px #000000;
+    border-radius: 20px;
+
+}
+.message .discussion{
+        /*STRUCTURE*/
+    width: 15%;
+    height: 78%;
+    margin-right: 2vw;
+    padding: 1vh 2vw;
+
+
+        /*STYLE*/
+    border: 1px solid #000000;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+}              
+.message .chat{
+        /*STRUCTURE*/
+    width: 80%;
+    height: 80%;
+    margin-left: 2vw;
+
+        /*STYLE*/
+    border: 1px solid #000000;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.message .chat .fildiscusion{
+    /*STRUCTURE*/
+    height: 80%;
+    margin: 1vh 2vw;
+    overflow-y: scroll;
+
+    /*STYLE*/
+}
+.sender,.recever{
+    /*STRUCTURE*/
+    width: 95%;
+    margin: 1vh 0vw;
+    padding-left:2vw;
+    
+    /*STYLE*/
+    border: 1px solid #000000;
+    border-radius: 5px;
+
+}
+.sender p:nth-child(2),.recever p:nth-child(2){
+    /*STRUCTURE*/
+    padding: 1vh 0.5vw;
+    
+    /*STYLE*/
+    background-color: #cecece;
+    font-size: 1.8vh;
+
+}
+.sender p:nth-child(3),.recever p:nth-child(3){
+    /*STRUCTURE*/
+    
+    /*STYLE*/
+    font-size: 1.2vh;
+
+}
+.sender span{
+    /*STRUCTURE*/
+    
+    /*STYLE*/
+    color: #1010ff;
+
+}
+.recever span{
+    /*STRUCTURE*/
+    
+    /*STYLE*/
+    color: #777b80;
+
+}
+.sender p:nth-child(2){
+    /*STRUCTURE*/
+    
+    /*STYLE*/
+    border-top: 2px solid #1010ff;
+
+}
+.recever p:nth-child(2){
+    /*STRUCTURE*/
+    
+    /*STYLE*/
+    border-top: 2px solid #777b80;
+
+}
+
+.message .chat .sendmessage form{
+    /*STRUCTURE*/
+display: flex;
+flex-direction: row;
+height: 10%;
+margin: 1vh 2vw;
+align-items: center;
+
+    /*STYLE*/
+
+}
+.message .chat .sendmessage textarea{
+    /*STRUCTURE*/
+height:8dvh ;
+width: 50dvw;
+padding: 0vh 5vw;
+
+    /*STYLE*/
+border-top-left-radius: 45px;
+border-bottom-left-radius: 45px;
+font-size: 2.5dvh;
+
+}
+.message .chat .sendmessage input{
+    /*STRUCTURE*/
+height: 8dvh ;
+width: 20dvw;
+
+    /*STYLE*/
+border: none;
+border-top-right-radius: 45px;
+border-bottom-right-radius: 45px;
+background-color: #1010ff;
+color: #ffffff;
+cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
+                /*FAVORI*/
+
+.favoris{
+        /*STRUCTURE*/
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    
+        /*STYLE*/
+    
+}
+.annnceFav{
+        /*STRUCTURE*/
+    margin: 2vh 2vw;
+    overflow: hidden;
+    width: 20%;
+    height: 20%;
+
+        /*STYLE*/
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: inset 0px 0px 10px #000000af;
+}
+.imgFav{
+        /*STRUCTURE*/
+    width: 100%;
+    height: 60%;
+    
+        /*STYLE*/
+
+
+}
+.imgFav img{
+        /*STRUCTURE*/
+    width: 100%;
+    height: 100%;
+    
+        /*STYLE*/
+
+
+}
+.DescriptionFav{
+        /*STRUCTURE*/
+    width: 100%;
+    height: 30%;
+    
+    
+        /*STYLE*/
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    font-size: 1.5dvh;
+}
+.DescriptionFav span,.DescriptionFav span+p{
+    /*STRUCTURE*/
+    display: flex;
+    justify-content: space-between;
+    margin: 0vh 1vw;
+    
+    /*STYLE*/
+}
+
+.action{
+        /*STRUCTURE*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 10%;
+    padding: 0.5vh 0vw;
+
+        /*STYLE*/
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    font-size: 1.5dvh;
+}
+.action form button {
+    /*STRUCTURE*/
+    
+    /*STYLE*/
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.action a img,.action form button img{
+    /*STRUCTURE*/
+    width: 1.2vw;
+    
+    /*STYLE*/
+}
+
+
+
+
+
+
+
+
+
+
+
+                /*MANAGEA*/
+
+
+
+
+
+
+
+                /*ANNONCE*/
+
+.annonceView{
+        /*STRUCTURE*/
+    display: flex;
+    flex-direction: row;
+    padding: 2vh 2vw;
+    height: 90vh;
+    
+        /*STYLE*/
+
+}
+.annonceView .AnnonceImage{
+    /*STRUCTURE*/
+    height: 50%;
+    width: 45%;
+    margin: 20vh 5vw;
+    overflow: hidden;
+    
+    /*STYLE*/
+    border-radius: 30px;
+
+}
+.annonceView .AnnonceImage img{
+    /*STRUCTURE*/
+    height: 100%;
+    width: 100%;
+    
+    
+    /*STYLE*/
+}
+.annonceView .AnnonceInfos{
+    /*STRUCTURE*/
+    height: 100%;
+    width: 35%;
+    padding: 1vh 2vw;
+
+    /*STYLE*/
+    box-shadow:inset 0px 0px 10px #000000;
+    border-radius: 20px;
+}
+.annonceView .AnnonceInfos div{
+    /*STRUCTURE*/
+    width: 100%;
+
+    margin: 2vh 0vw;
+    padding: 1.5%;
+    
+    /*STYLE*/
+    border-bottom:2px dashed #91959b;
+
+}
+.annonceView .AnnonceInfos div p{
+    /*STRUCTURE*/
+    margin: 0.8vh 0vw;
+
+    /*STYLE*/
+
+}
+.annonceView .mesOffres{
+    /*STRUCTURE*/
+    width: 80%;
+
+    /*STYLE*/
+    border: 1px dashed #91959b;
+    border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+                /*ANNONCE_SEARCH*/
+
+.annnonceSearch{
+    /*STRUCTURE*/
+    display: flex;
+    flex-wrap: wrap;
+    
+    /*STYLE*/
+
+
+}

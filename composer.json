@@ -1,0 +1,17 @@
+{
+    "name": "tsiba/pcl",
+    "description": "project client leger(web)",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Run\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "modeste TSIBA",
+            "email": "tsibacaleb@gmail.com"
+        }
+    ],
+    "require": {}
+}

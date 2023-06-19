@@ -1,0 +1,120 @@
+/*ALL CSS NORME*/
+*{
+    margin: 0%;
+    padding: 0%;
+    list-style: none;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    
+}
+body{
+    width: 100%;
+}
+main{
+    margin-top: 20vh;
+}
+
+            /*header*/
+.navbar{
+    /*STRUCTURE*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.5vh 0vh;
+    width: 100%;
+
+    /*STYLE*/
+    background-color: #040813;
+    color: #ffffff;
+    
+}
+.navbar .titre{
+    /*STRUCTURE*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /*STYLE*/
+    
+
+}
+.navbar .titre .title a{
+    /*STRUCTURE*/
+
+
+    /*STYLE*/
+    font-size: 1.8vw;
+
+}
+.navbar .titre div{
+    /*STRUCTURE*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    /*STYLE*/
+
+}
+.navbar .titre .manage a{
+    /*STRUCTURE*/
+    padding: 0.3vh 1.2vw;
+    
+    /*STYLE*/
+    border-radius: 45px;
+    background-color: #1010ff;
+    
+}
+.navbar .titre .log form button{
+    /*STRUCTURE*/
+    
+    /*STYLE*/
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+}
+.navbar a{
+    /*STRUCTURE*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /*STYLE*/
+    
+}
+
+.navbar a img{
+    /*STRUCTURE*/
+    width: 2dvw;
+    
+
+    /*STYLE*/
+    filter: invert(100%);
+    
+}
+.navbar button img{
+    /*STRUCTURE*/
+    width: 2dvw;
+    
+
+    /*STYLE*/
+    filter: invert(100%);
+    
+}
+.navbar .lien{
+    /*STRUCTURE*/
+    display: flex;
+
+    /*STYLE*/
+
+}
+.navbar a{
+    /*STRUCTURE*/
+    margin: 0vh 0.5vw;
+
+    /*STYLE*/
+    color: #ffffff;
+    font-size: 1dvw;
+}
+
