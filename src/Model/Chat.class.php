@@ -41,7 +41,7 @@ class Chat{
             `user2_id`,
             `message_user2`
         )
-        VALUES(".$user1.",".$user2.", '".$messageU1."');";
+        VALUES(".htmlspecialchars($user1).",".htmlspecialchars($user2).", '".htmlspecialchars($messageU1)."');";
 
         return $sql ;
     }
@@ -51,7 +51,7 @@ class Chat{
             `user2_id`,
             `message_user1`
         )
-        VALUES(".$user1.",".$user2.", '".$messageU2."');";
+        VALUES(".htmlspecialchars($user1).",".htmlspecialchars($user2).", '".htmlspecialchars($messageU2)."');";
 
         return $sql ;
     }

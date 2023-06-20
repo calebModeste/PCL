@@ -34,10 +34,10 @@
                 </div>
                 <div class="action">
                   <a href="./annonce.php?idAnnonce=<?=$fav['annonce_id']?>"><img src="./public/img/icon/icons8-ouvrir-en-fenêtre-32.png" alt="voir"></a>
-                  <a href="./chat.php?idAnnonce=<?=$fav['annonce_id']?>"><img src="./public/img/icon/icons8-salon-de-discussion-32.png" alt="messagerie"></a>
+                  <a href="./chat.php?receve=<?=$an['auteur']?>&cas=1"><img src="./public/img/icon/icons8-salon-de-discussion-32.png" alt="messagerie"></a>
                   <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
                       <input type="number" hidden value="<?=$fav['favoris_id']?>" name="favId">
-                      <button type="submit"><img src="./public/img/icon/icons8-supprimer-pour-toujours-32.png" alt="supprimer"></button>
+                      <button type="submit" name="deleteFav"><img src="./public/img/icon/icons8-supprimer-pour-toujours-32.png" alt="supprimer"></button>
                   </form>
                 </div>
               </div>
@@ -48,11 +48,18 @@
       </section>
 
       <?php 
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['favId']) && $_POST['favId']!=0) {
-          var_dump($_POST['favId']);
-          //$deletefav= $connect->exePrepaQuery($annonce->deletefavoris($_POST['favId']));
-          //header('location: ./favoris.php');
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['deleteFav']) && isset($_POST['favId']) && $_POST['favId']!=0) {
+          //var_dump($_POST['favId']);
+          $deletefav= $connect->exePrepaQuery($annonce->deletefavoris($_POST['favId']));
+          
         }
+      
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['setfavoris']) && (isset($_POST['idAnnonce']) && !empty($_POST['idAnnonce']))) {
+            var_dump($_POST['idAnnonce'],$_SESSION['id']);
+            $setfav = $connect->exePrepaQuery($annonce->setfavoris($_SESSION['id'],$_POST['idAnnonce']));
+            
+               
+            }
 
       ?>
 

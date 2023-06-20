@@ -176,6 +176,43 @@ class Annonce{
 
         return htmlspecialchars($sql) ;
     }
+    function getAnnonceByAuteur(int $id){
+        $sql="SELECT
+                annonce.id ,
+                annonce.titre ,
+                categories.titre as cate,
+                users.pseudo,
+                auteur,
+                date_creation,
+                prix,
+                description
+            FROM
+                annonce
+            JOIN users ON users.id = annonce.auteur
+            JOIN categories ON categories.id = annonce.categorie_id
+            WHERE
+                annonce.auteur =".$id;
+
+        return htmlspecialchars($sql) ;
+    }
+    function setAnnonce(string $titre,int $categorie,int $auteur,int $prix, string $descript){
+        $sql="INSERT INTO annonce(
+            titre,
+            categorie_id,
+            auteur,
+            prix,
+            description
+        )
+        VALUES(
+            '".htmlspecialchars($titre)."',
+            ".htmlspecialchars($categorie).",
+            ".htmlspecialchars($auteur).",
+            ".htmlspecialchars($prix).",
+            '".htmlspecialchars($descript)."'
+        )";
+
+        return $sql ;
+    }
     function getFavoris(int $user){
         $sql="SELECT
                 favoris_id,
@@ -224,6 +261,20 @@ class Annonce{
             WHERE
                 offre.auteur_offre =".$idUser." AND offre.annonce_id =".$idAnnonce."
             ORDER BY offre.offre_id DESC";
+
+        return htmlspecialchars($sql);
+    }
+    function getOffrebyAnnonce( int $idAnnonce){
+        $sql="SELECT
+                offre.auteur_offre,
+                users.pseudo as auteur,
+                offre.proposition as offrePrix,
+                offre.annonce_id
+            FROM
+                offre
+            JOIN users ON users.id = offre.auteur_offre
+            WHERE 
+                offre.annonce_id =".$idAnnonce;
 
         return htmlspecialchars($sql);
     }

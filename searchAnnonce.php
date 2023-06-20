@@ -81,7 +81,8 @@
                   <img src="./public/img/icon/icons8-ouvrir-en-fenêtre-32.png" alt="voir">
                 </a>
 
-                <form action="./favoris.php" method="get">
+                <form action="./favoris.php" method="post">
+                  <input type="number" hidden value="<?=$anSearch['id']?>" name="idAnnonce" id="">
                   <button name="setfavoris" type="submit">
                     <img src="./public/img/icon/icons8-signet-32.png" alt="favoris">
                   </button>
@@ -131,8 +132,9 @@
                   <img src="./public/img/icon/icons8-ouvrir-en-fenêtre-32.png" alt="voir">
                 </a>
 
-                <form action="" method="get">
-                  <button type="submit">
+                <form action="./favoris.php" method="post">
+                  <input type="number" hidden value="<?=$anSearch['id']?>" name="idAnnonce" id="">
+                  <button name="setfavoris" name="setfavoris" type="submit">
                     <img src="./public/img/icon/icons8-signet-32.png" alt="favoris">
                   </button>
                 </form>
@@ -182,8 +184,10 @@
                   <img src="./public/img/icon/icons8-ouvrir-en-fenêtre-32.png" alt="voir">
                 </a>
 
-                <form action="" method="get">
-                  <button type="submit">
+                <form action="./favoris.php" method="post">
+                  <input type="number" hidden value="<?=$anSearch['id']?>" name="idAnnonce" id="">
+
+                  <button name="setfavoris" type="submit">
                     <img src="./public/img/icon/icons8-signet-32.png" alt="favoris">
                   </button>
                 </form>
@@ -231,8 +235,10 @@
                   <img src="./public/img/icon/icons8-ouvrir-en-fenêtre-32.png" alt="voir">
                 </a>
 
-                <form action="" method="get">
-                  <button type="submit">
+                <form action="./favoris.php" method="post">
+                  <input type="number" hidden value="<?=$anSearch['id']?>" name="idAnnonce" id="">
+
+                  <button name="setfavoris" type="submit">
                     <img src="./public/img/icon/icons8-signet-32.png" alt="favoris">
                   </button>
                 </form>
@@ -279,8 +285,10 @@
                   <img src="./public/img/icon/icons8-ouvrir-en-fenêtre-32.png" alt="voir">
                 </a>
 
-                <form action="" method="get">
-                  <button type="submit">
+                <form action="./favoris.php" method="post">
+                  <input type="number" hidden value="<?=$anSearch['id']?>" name="idAnnonce" id="">
+
+                  <button name="setfavoris" type="submit">
                     <img src="./public/img/icon/icons8-signet-32.png" alt="favoris">
                   </button>
                 </form>
@@ -327,8 +335,10 @@
                   <img src="./public/img/icon/icons8-ouvrir-en-fenêtre-32.png" alt="voir">
                 </a>
 
-                <form action="" method="get">
-                  <button type="submit">
+                <form action="./favoris.php" method="post">
+                  <input type="number" hidden value="<?=$anSearch['id']?>" name="idAnnonce" id="">
+
+                  <button name="setfavoris" type="submit">
                     <img src="./public/img/icon/icons8-signet-32.png" alt="favoris">
                   </button>
                 </form>
@@ -373,10 +383,11 @@
 
                 <a href="./annonce.php?idAnnonce=<?=$anSearch['id']?>">
                   <img src="./public/img/icon/icons8-ouvrir-en-fenêtre-32.png" alt="voir">
-                </a>
+                </a>./favoris.php
+                <form action="./favoris.php" method="post">
+                  <input type="number" hidden value="<?=$anSearch['id']?>" name="idAnnonce" id="">
 
-                <form action="" method="get">
-                  <button type="submit">
+                  <button name="setfavoris" type="submit">
                     <img src="./public/img/icon/icons8-signet-32.png" alt="favoris">
                   </button>
                 </form>
@@ -423,8 +434,10 @@
                   <img src="./public/img/icon/icons8-ouvrir-en-fenêtre-32.png" alt="voir">
                 </a>
 
-                <form action="" method="get">
-                  <button type="submit">
+                <form action="./favoris.php" method="post">
+                  <input type="number" hidden value="<?=$anSearch['id']?>" name="idAnnonce" id="">
+
+                  <button name="setfavoris" type="submit">
                     <img src="./public/img/icon/icons8-signet-32.png" alt="favoris">
                   </button>
                 </form>
@@ -442,7 +455,13 @@
 
         </section>
        
-
+          <?php 
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['idAnnonce']) && !empty($_POST['idAnnonce']))) {
+                var_dump($anSearch['id'],$_SESSION['id']);
+                
+                   
+                }
+          ?>
     </main>
 
 </body>

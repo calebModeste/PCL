@@ -124,27 +124,27 @@
         </section>
         <?php
           if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['message'])&& isset($_GET['receve']) && isset($_GET['cas'])) {
-            echo $_GET['cas'];                              
-                     if ($_GET['cas']==1) {
-                     $message = $connect->exePrepaQuery(
-                       $chat->setmessageU1(
-                         $_SESSION['id'],
-                         $_GET['receve'],
-                         $_POST['message']
-                         )
-                     );
-                     header("location: ./chat.php");
-                     }
-                     if ($_GET['cas']==2) {
-                     $message = $connect->exePrepaQuery(
-                       $chat->setmessageU2(
-                         $_GET['receve'],
-                         $_SESSION['id'],
-                         $_POST['message']
-                         )
-                     );
-                     header("location: ./chat.php");
-                     } 
+              echo $_GET['cas'];                              
+              if ($_GET['cas']==1) {
+              $message = $connect->exePrepaQuery(
+                $chat->setmessageU1(
+                  $_SESSION['id'],
+                  $_GET['receve'],
+                  $_POST['message']
+                  )
+              );
+              header("location: ./chat.php");
+              }
+              if ($_GET['cas']==2) {
+              $message = $connect->exePrepaQuery(
+                $chat->setmessageU2(
+                  $_GET['receve'],
+                  $_SESSION['id'],
+                  $_POST['message']
+                  )
+              );
+              header("location: ./chat.php");
+              } 
           }
 
         ?>
