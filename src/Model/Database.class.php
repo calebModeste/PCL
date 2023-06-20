@@ -7,8 +7,8 @@ use PDOException;
 class DataPDO{
     private static $host = 'localhost';
     private static $dbname = 'datamarket';
-    private static $user = 'admin';
-    private static $password = 'irhonagasaki7*';
+    private static $user = '';
+    private static $password = '';
     private static $option=[
         PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
         PDO::FETCH_OBJ,
