@@ -17,8 +17,20 @@
     <!-- main -->
     <main>
         <section class="search">
+        <?php 
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['idAnnonce']) && !empty($_POST['idAnnonce']))) {
+                //var_dump($anSearch['id'],);
+                $setfavoris = $connect->exePrepaQuery($annonce->setfavoris($_SESSION['id'],$_POST['idAnnonce']));
+                   
+                }
+          ?>
 
-          <form action="" method="get">
+
+
+
+
+
+          <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
             
             <input type="search" name="searchAnnonce" value="recherche" id="searchAnnonce">
 
@@ -455,13 +467,7 @@
 
         </section>
        
-          <?php 
-            if ($_SERVER["REQUEST_METHOD"] == "POST" && (isset($_POST['idAnnonce']) && !empty($_POST['idAnnonce']))) {
-                var_dump($anSearch['id'],$_SESSION['id']);
-                
-                   
-                }
-          ?>
+
     </main>
 
 </body>

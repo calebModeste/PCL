@@ -16,6 +16,18 @@
 
     <!-- main -->
     <main>
+    <?php 
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $setAnnonce= $connect->exePrepaQuery($annonce->setAnnonce($_POST['MakeTitreA'],$_POST['MakeCategA'],$_SESSION['id'],$_POST['MakePrixA'],$_POST['MakedescripA']));
+ 
+          }
+
+      ?>
+
+
+
+
+
       <section class="yoursAnnonce">
         <table >
           <tr>
@@ -114,13 +126,7 @@
         </table>
       </section>
 
-      <?php 
-          if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $setAnnonce= $connect->exePrepaQuery($annonce->setAnnonce($_POST['MakeTitreA'],$_POST['MakeCategA'],$_SESSION['id'],$_POST['MakePrixA'],$_POST['MakedescripA']));
- 
-          }
 
-      ?>
 
     </main>
 

@@ -16,6 +16,18 @@
 
     <!-- main -->
     <main>
+    <?php 
+
+      if ($_SERVER["REQUEST_METHOD"] == "POST" ) {           
+        $offre=$connect->exePrepaQuery($annonce->setOffre($_SESSION['id'],$_POST['offre'],$_GET['idAnnonce']));
+        //header("location:./annonce.php?idAnnonce=".$_GET['idAnnonce']);
+        
+      }
+    ?>
+
+
+
+
         <section class="annonceView">
             <div class="AnnonceImage">
                 <img src="./public/img/0bb3f532-7661-426a-a24a-1958cfb9c705.png" alt="annonce">
@@ -89,14 +101,7 @@
           </div>
 
         </section>
-       <?php 
 
-          if ($_SERVER["REQUEST_METHOD"] == "POST" ) {           
-            $offre=$connect->exePrepaQuery($annonce->setOffre($_SESSION['id'],$_POST['offre'],$_GET['idAnnonce']));
-            //header("location:./annonce.php?idAnnonce=".$_GET['idAnnonce']);
-            //exit;
-        }
-       ?>
 
     </main>
 

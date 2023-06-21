@@ -16,6 +16,25 @@
 
     <!-- main -->
     <main>
+    <?php 
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['deleteFav']) && isset($_POST['favId']) && $_POST['favId']!=0) {
+          //var_dump($_POST['favId']);
+          $deletefav= $connect->exePrepaQuery($annonce->deletefavoris($_POST['favId']));
+          
+        }
+      
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['setfavoris']) && (isset($_POST['idAnnonce']) && !empty($_POST['idAnnonce']))) {
+            var_dump($_POST['idAnnonce'],$_SESSION['id']);
+            $setfav = $connect->exePrepaQuery($annonce->setfavoris($_SESSION['id'],$_POST['idAnnonce']));
+            
+               
+            }
+
+      ?>
+
+
+
+
       <section class="favoris">
         <?php 
           $favoris=$connect->exePrepaQuery($annonce->getFavoris($_SESSION['id']));
@@ -47,21 +66,7 @@
             endforeach;  ?>
       </section>
 
-      <?php 
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['deleteFav']) && isset($_POST['favId']) && $_POST['favId']!=0) {
-          //var_dump($_POST['favId']);
-          $deletefav= $connect->exePrepaQuery($annonce->deletefavoris($_POST['favId']));
-          
-        }
-      
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['setfavoris']) && (isset($_POST['idAnnonce']) && !empty($_POST['idAnnonce']))) {
-            var_dump($_POST['idAnnonce'],$_SESSION['id']);
-            $setfav = $connect->exePrepaQuery($annonce->setfavoris($_SESSION['id'],$_POST['idAnnonce']));
-            
-               
-            }
 
-      ?>
 
     </main>
 
